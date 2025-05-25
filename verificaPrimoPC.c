@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <semaphore.h>
 #include <unistd.h>
+#include <math.h>
 
 #define PRODUTORES 10
 #define CONSUMIDORES 5
@@ -14,11 +15,8 @@ sem_t mutexGeral;
 int* canal;
 int N;
 int M;
-int n_analisados = 0;
-typedef struct 
-{
-    int id;
-}threadInsere;
+int n_analisado = 0;
+
 
 typedef struct 
 {
@@ -37,14 +35,15 @@ int ehPrimo(long long int n) {
     return 1;
 }
 void printCanal(int canal[], int M){
+    
     printf("[");
     for(int i = 0;i<M;i++){
-        printf("%d ");
+        printf("%d ",canal[i]);
     }
     printf("]\n");
 }
 
-void Insere(int num, int id,int M){
+void Insere(int num, int M){
     static int in;
     sem_wait(&slotVazio);
     sem_wait(&mutexGeral);
@@ -58,16 +57,19 @@ void Insere(int num, int id,int M){
     sem_post(&slotCheio);
 }
 
-int verificaPrimo(int id, int M){
+int verificaPrimo(int id, int M, threadConsome *args){
     static int out;
     int validar_num; 
     sem_wait(&slotCheio);
     sem_wait(&mutexGeral);
     validar_num = canal[out];
+    if(n_analisado ==-1 ) return 1;
     printf("Numero %d sera verificado pela consumidora %d\n", validar_num, id);
     canal[out] = 0;
-    if(n_analisados>=N) return 1;
-    ehPrimo(validar_num);
+    if(ehPrimo(validar_num)){
+        printf("%d eh primo\n", validar_num);
+        args->quantoConsumiu+=1;
+    }
     out = (out+1)%M;
     printCanal(canal,M);
     sem_post(&mutexGeral);
@@ -77,27 +79,33 @@ int verificaPrimo(int id, int M){
 
 
 void *produtor(void *arg){
-    threadInsere * args = (threadInsere *)(arg); 
-    free(arg);
-    while(n_analisados<N){
+    int nthreads = (int) arg;
+    while(n_analisado<N){
         sleep(1);
-        Insere(n_analisados, args->id, M);
-        n_analisados+=1;
+        Insere(n_analisado, M);
+        n_analisado+=1;
     }
+
+    for(int i = 0; i<nthreads;i++){
+        Insere(-1,M);
+    }
+
     pthread_exit(NULL);
+    return 0;
 }
 
 void *consumidor(void *arg){
     threadConsome * args = (threadConsome *)(arg);
+    printf("estou na thread %d\n", args->id);
     int result;
-    free(arg);
-    while(1){
-        result = verificaPrimo(args->id,M);
-        args->quantoConsumiu +=1;
+    //free(arg);
+    while(n_analisado<N){
+        result += verificaPrimo(args->id,M,args);
         if(result) break;
     }
-
+    printf("saindo da thread %d\n", args->id);
     pthread_exit(NULL);
+    return 0;
 }
 
 int main(int argc, char * argv[]){
@@ -105,23 +113,23 @@ int main(int argc, char * argv[]){
     int thread_vencedora;
     int valor_max_analisado=0;
     if(argc<4){
-        printf("ERRO----\nPorfavor insira na linha de comando algo como %s<ate que numero analisar> <tamanho do canal> <numero de threads>\n");
+        printf("ERRO----\nPorfavor insira na linha de comando algo como %s <ate que numero analisar> <tamanho do canal> <numero de threads> \n",argv[0]);
         return 1;
     }
     N = atoi(argv[1]);
     M = atoi(argv[2]);
     nthreads = atoi(argv[3]);
+    canal = (int * )calloc(M,sizeof(int));
     if(N<nthreads)nthreads=N;
     pthread_t tid[nthreads+1]; //mais 1 porque teremos 1 threads que irá inserir e o usuario nos dara o numero de threads que serão consumidoras
-    threadInsere* args_insere;
     threadConsome * args_consome;
 
+    args_consome = (threadConsome *) malloc(sizeof(threadConsome)*nthreads);
 
     sem_init(&mutexGeral, 0, 1);
     sem_init(&slotCheio, 0, 0);
     sem_init(&slotVazio, 0, N);
 
-    canal = (int*) malloc(sizeof(int)*M);
     for(int i = 0; i<nthreads;i++){
         (args_consome+i)->id=i;
         (args_consome+i)->quantoConsumiu = 0;
@@ -130,7 +138,7 @@ int main(int argc, char * argv[]){
             return 2;
         }
     }
-    if(pthread_create(&tid[nthreads+1],NULL,produtor, (void *) args_insere)){
+    if(pthread_create(&tid[nthreads],NULL,produtor, (void *) nthreads)){
         printf("ERRO-----\nErro ao criar thread\n");
         return 3;
     }
@@ -140,12 +148,12 @@ int main(int argc, char * argv[]){
             printf("ERRO------\nErro ao receber threads\n");
             return 4;
         }
-        if(valor_max_analisado<(args_consome+i)->quantoConsumiu)
+        if(valor_max_analisado<(args_consome+i)->quantoConsumiu){
             valor_max_analisado = (args_consome+i)->quantoConsumiu;
             thread_vencedora = (args_consome+i)->id;
+        }
     }
-    printf("Entao ao final de nossa analise a thread vencedora eh: %d\n", thread_vencedora);
+    printf("Entao ao final de nossa analise a thread vencedora eh: %d descobrindo %d primos\n", thread_vencedora, valor_max_analisado);
     free(args_consome);
-    free(args_insere);
     return 0;
 }
