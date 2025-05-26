@@ -51,8 +51,8 @@ void Insere(int num, int M){
         numeros_no_canal++;
         sem_post(&contador);
     }
-    printf("Inserido %d\n", num);
-    printCanal(canal,M);
+    //printf("Inserido %d\n", num);
+    //printCanal(canal,M);
 
     sem_post(&mutexGeral);
     sem_post(&slotCheio);
@@ -74,14 +74,14 @@ int verificaPrimo(int id, int M, threadConsome *args){
         }
         sem_post(&contador);
     }
-    printf("Numero %d sera verificado pela consumidora %d\n", validar_num, id);
+    //printf("Numero %d sera verificado pela consumidora %d\n", validar_num, id);
     canal[out] = 0;
     out = (out+1)%M;
     if(ehPrimo(validar_num)){
         args->quantoConsumiu+=1;
-        printf("%d eh primo\n", validar_num);
+        //printf("%d eh primo\n", validar_num);
     }
-    printCanal(canal,M);
+    //printCanal(canal,M);
 
     sem_wait(&contador);
     numeros_no_canal--;
@@ -121,7 +121,7 @@ void *consumidor(void *arg){
     //free(arg);
     while(n_analisados<N){
         result += verificaPrimo(args->id,M,args);
-        printf("result %d \n", result);
+        //printf("result %d \n", result);
         if(result) break;
     }
     printf("saindo da thread %d\n", args->id);
