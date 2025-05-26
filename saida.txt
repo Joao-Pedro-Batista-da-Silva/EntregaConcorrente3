@@ -1,5 +1,4 @@
 estou na thread 0
-estou na thread 1
 Inserido 0
 [0 0 0 0 0 0 0 0 0 0 ]
 Inserido 1
@@ -8,529 +7,526 @@ Inserido 2
 [0 1 2 0 0 0 0 0 0 0 ]
 Inserido 3
 [0 1 2 3 0 0 0 0 0 0 ]
-Numero 0 sera verificado pela consumidora 0
-[0 1 2 3 0 0 0 0 0 0 ]
-result 0 
 Inserido 4
 [0 1 2 3 4 0 0 0 0 0 ]
-Numero 1 sera verificado pela consumidora 1
-[0 0 2 3 4 0 0 0 0 0 ]
-result 0 
-Numero 2 sera verificado pela consumidora 0
-2 eh primo
-[0 0 0 3 4 0 0 0 0 0 ]
-result 0 
 Inserido 5
-[0 0 0 3 4 5 0 0 0 0 ]
-Numero 3 sera verificado pela consumidora 1
-3 eh primo
-[0 0 0 0 4 5 0 0 0 0 ]
-result 0 
-Numero 4 sera verificado pela consumidora 0
-[0 0 0 0 0 5 0 0 0 0 ]
-result 0 
+[0 1 2 3 4 5 0 0 0 0 ]
 Inserido 6
-[0 0 0 0 0 5 6 0 0 0 ]
-Numero 5 sera verificado pela consumidora 1
-5 eh primo
-[0 0 0 0 0 0 6 0 0 0 ]
-result 0 
+[0 1 2 3 4 5 6 0 0 0 ]
 Inserido 7
-[0 0 0 0 0 0 6 7 0 0 ]
-Numero 6 sera verificado pela consumidora 0
-[0 0 0 0 0 0 0 7 0 0 ]
+[0 1 2 3 4 5 6 7 0 0 ]
+Numero 0 sera verificado pela consumidora 0
+[0 1 2 3 4 5 6 7 0 0 ]
 result 0 
 Inserido 8
-[0 0 0 0 0 0 0 7 8 0 ]
-Numero 7 sera verificado pela consumidora 1
-7 eh primo
-[0 0 0 0 0 0 0 0 8 0 ]
+[0 1 2 3 4 5 6 7 8 0 ]
+Numero 1 sera verificado pela consumidora 0
+[0 0 2 3 4 5 6 7 8 0 ]
 result 0 
 Inserido 9
-[0 0 0 0 0 0 0 0 8 9 ]
-Numero 8 sera verificado pela consumidora 0
-[0 0 0 0 0 0 0 0 0 9 ]
+[0 0 2 3 4 5 6 7 8 9 ]
+Numero 2 sera verificado pela consumidora 0
+2 eh primo
+[0 0 0 3 4 5 6 7 8 9 ]
 result 0 
 Inserido 10
-[10 0 0 0 0 0 0 0 0 9 ]
-Numero 9 sera verificado pela consumidora 1
-[10 0 0 0 0 0 0 0 0 0 ]
+[10 0 0 3 4 5 6 7 8 9 ]
+Numero 3 sera verificado pela consumidora 0
+3 eh primo
+[10 0 0 0 4 5 6 7 8 9 ]
 result 0 
 Inserido 11
-[10 11 0 0 0 0 0 0 0 0 ]
-Numero 10 sera verificado pela consumidora 0
-[0 11 0 0 0 0 0 0 0 0 ]
+[10 11 0 0 4 5 6 7 8 9 ]
+Numero 4 sera verificado pela consumidora 0
+[10 11 0 0 0 5 6 7 8 9 ]
 result 0 
 Inserido 12
-[0 11 12 0 0 0 0 0 0 0 ]
-Numero 11 sera verificado pela consumidora 1
-11 eh primo
-[0 0 12 0 0 0 0 0 0 0 ]
+[10 11 12 0 0 5 6 7 8 9 ]
+Numero 5 sera verificado pela consumidora 0
+5 eh primo
+[10 11 12 0 0 0 6 7 8 9 ]
 result 0 
 Inserido 13
-[0 0 12 13 0 0 0 0 0 0 ]
-Numero 12 sera verificado pela consumidora 0
-[0 0 0 13 0 0 0 0 0 0 ]
+[10 11 12 13 0 0 6 7 8 9 ]
+Numero 6 sera verificado pela consumidora 0
+[10 11 12 13 0 0 0 7 8 9 ]
 result 0 
 Inserido 14
-[0 0 0 13 14 0 0 0 0 0 ]
-Numero 13 sera verificado pela consumidora 1
-13 eh primo
-[0 0 0 0 14 0 0 0 0 0 ]
+[10 11 12 13 14 0 0 7 8 9 ]
+Numero 7 sera verificado pela consumidora 0
+7 eh primo
+[10 11 12 13 14 0 0 0 8 9 ]
 result 0 
 Inserido 15
-[0 0 0 0 14 15 0 0 0 0 ]
-Numero 14 sera verificado pela consumidora 0
-[0 0 0 0 0 15 0 0 0 0 ]
+[10 11 12 13 14 15 0 0 8 9 ]
+Numero 8 sera verificado pela consumidora 0
+[10 11 12 13 14 15 0 0 0 9 ]
 result 0 
 Inserido 16
-[0 0 0 0 0 15 16 0 0 0 ]
-Numero 15 sera verificado pela consumidora 1
-[0 0 0 0 0 0 16 0 0 0 ]
+[10 11 12 13 14 15 16 0 0 9 ]
+Numero 9 sera verificado pela consumidora 0
+[10 11 12 13 14 15 16 0 0 0 ]
 result 0 
 Inserido 17
-[0 0 0 0 0 0 16 17 0 0 ]
-Numero 16 sera verificado pela consumidora 0
-[0 0 0 0 0 0 0 17 0 0 ]
+[10 11 12 13 14 15 16 17 0 0 ]
+Numero 10 sera verificado pela consumidora 0
+[0 11 12 13 14 15 16 17 0 0 ]
 result 0 
 Inserido 18
-[0 0 0 0 0 0 0 17 18 0 ]
-Numero 17 sera verificado pela consumidora 1
-17 eh primo
-[0 0 0 0 0 0 0 0 18 0 ]
+[0 11 12 13 14 15 16 17 18 0 ]
+Numero 11 sera verificado pela consumidora 0
+11 eh primo
+[0 0 12 13 14 15 16 17 18 0 ]
 result 0 
 Inserido 19
-[0 0 0 0 0 0 0 0 18 19 ]
-Numero 18 sera verificado pela consumidora 0
-[0 0 0 0 0 0 0 0 0 19 ]
+[0 0 12 13 14 15 16 17 18 19 ]
+Numero 12 sera verificado pela consumidora 0
+[0 0 0 13 14 15 16 17 18 19 ]
 result 0 
 Inserido 20
-[20 0 0 0 0 0 0 0 0 19 ]
-Numero 19 sera verificado pela consumidora 1
-19 eh primo
-[20 0 0 0 0 0 0 0 0 0 ]
+[20 0 0 13 14 15 16 17 18 19 ]
+Numero 13 sera verificado pela consumidora 0
+13 eh primo
+[20 0 0 0 14 15 16 17 18 19 ]
 result 0 
 Inserido 21
-[20 21 0 0 0 0 0 0 0 0 ]
-Numero 20 sera verificado pela consumidora 0
-[0 21 0 0 0 0 0 0 0 0 ]
+[20 21 0 0 14 15 16 17 18 19 ]
+Numero 14 sera verificado pela consumidora 0
+[20 21 0 0 0 15 16 17 18 19 ]
 result 0 
 Inserido 22
-[0 21 22 0 0 0 0 0 0 0 ]
-Numero 21 sera verificado pela consumidora 1
-[0 0 22 0 0 0 0 0 0 0 ]
+[20 21 22 0 0 15 16 17 18 19 ]
+Numero 15 sera verificado pela consumidora 0
+[20 21 22 0 0 0 16 17 18 19 ]
 result 0 
 Inserido 23
-[0 0 22 23 0 0 0 0 0 0 ]
-Numero 22 sera verificado pela consumidora 0
-[0 0 0 23 0 0 0 0 0 0 ]
+[20 21 22 23 0 0 16 17 18 19 ]
+Numero 16 sera verificado pela consumidora 0
+[20 21 22 23 0 0 0 17 18 19 ]
 result 0 
 Inserido 24
-[0 0 0 23 24 0 0 0 0 0 ]
-Numero 23 sera verificado pela consumidora 1
-23 eh primo
-[0 0 0 0 24 0 0 0 0 0 ]
+[20 21 22 23 24 0 0 17 18 19 ]
+Numero 17 sera verificado pela consumidora 0
+17 eh primo
+[20 21 22 23 24 0 0 0 18 19 ]
 result 0 
 Inserido 25
-[0 0 0 0 24 25 0 0 0 0 ]
-Numero 24 sera verificado pela consumidora 0
-[0 0 0 0 0 25 0 0 0 0 ]
+[20 21 22 23 24 25 0 0 18 19 ]
+Numero 18 sera verificado pela consumidora 0
+[20 21 22 23 24 25 0 0 0 19 ]
 result 0 
 Inserido 26
-[0 0 0 0 0 25 26 0 0 0 ]
-Numero 25 sera verificado pela consumidora 1
-[0 0 0 0 0 0 26 0 0 0 ]
+[20 21 22 23 24 25 26 0 0 19 ]
+Numero 19 sera verificado pela consumidora 0
+19 eh primo
+[20 21 22 23 24 25 26 0 0 0 ]
 result 0 
 Inserido 27
-[0 0 0 0 0 0 26 27 0 0 ]
-Numero 26 sera verificado pela consumidora 0
-[0 0 0 0 0 0 0 27 0 0 ]
+[20 21 22 23 24 25 26 27 0 0 ]
+Numero 20 sera verificado pela consumidora 0
+[0 21 22 23 24 25 26 27 0 0 ]
 result 0 
 Inserido 28
-[0 0 0 0 0 0 0 27 28 0 ]
+[0 21 22 23 24 25 26 27 28 0 ]
+Numero 21 sera verificado pela consumidora 0
+[0 0 22 23 24 25 26 27 28 0 ]
+result 0 
 Inserido 29
-[0 0 0 0 0 0 0 27 28 29 ]
-Numero 27 sera verificado pela consumidora 1
-[0 0 0 0 0 0 0 0 28 29 ]
+[0 0 22 23 24 25 26 27 28 29 ]
+Numero 22 sera verificado pela consumidora 0
+[0 0 0 23 24 25 26 27 28 29 ]
 result 0 
 Inserido 30
-[30 0 0 0 0 0 0 0 28 29 ]
-Numero 28 sera verificado pela consumidora 0
-[30 0 0 0 0 0 0 0 0 29 ]
-result 0 
-Numero 29 sera verificado pela consumidora 1
-29 eh primo
-[30 0 0 0 0 0 0 0 0 0 ]
+[30 0 0 23 24 25 26 27 28 29 ]
+Numero 23 sera verificado pela consumidora 0
+23 eh primo
+[30 0 0 0 24 25 26 27 28 29 ]
 result 0 
 Inserido 31
-[30 31 0 0 0 0 0 0 0 0 ]
-Numero 30 sera verificado pela consumidora 0
-[0 31 0 0 0 0 0 0 0 0 ]
+[30 31 0 0 24 25 26 27 28 29 ]
+Numero 24 sera verificado pela consumidora 0
+[30 31 0 0 0 25 26 27 28 29 ]
 result 0 
 Inserido 32
-[0 31 32 0 0 0 0 0 0 0 ]
-Numero 31 sera verificado pela consumidora 1
-31 eh primo
-[0 0 32 0 0 0 0 0 0 0 ]
+[30 31 32 0 0 25 26 27 28 29 ]
+Numero 25 sera verificado pela consumidora 0
+[30 31 32 0 0 0 26 27 28 29 ]
 result 0 
 Inserido 33
-[0 0 32 33 0 0 0 0 0 0 ]
-Numero 32 sera verificado pela consumidora 0
-[0 0 0 33 0 0 0 0 0 0 ]
+[30 31 32 33 0 0 26 27 28 29 ]
+Numero 26 sera verificado pela consumidora 0
+[30 31 32 33 0 0 0 27 28 29 ]
 result 0 
 Inserido 34
-[0 0 0 33 34 0 0 0 0 0 ]
-Numero 33 sera verificado pela consumidora 1
-[0 0 0 0 34 0 0 0 0 0 ]
+[30 31 32 33 34 0 0 27 28 29 ]
+Numero 27 sera verificado pela consumidora 0
+[30 31 32 33 34 0 0 0 28 29 ]
 result 0 
 Inserido 35
-[0 0 0 0 34 35 0 0 0 0 ]
-Numero 34 sera verificado pela consumidora 0
-[0 0 0 0 0 35 0 0 0 0 ]
+[30 31 32 33 34 35 0 0 28 29 ]
+Numero 28 sera verificado pela consumidora 0
+[30 31 32 33 34 35 0 0 0 29 ]
 result 0 
 Inserido 36
-[0 0 0 0 0 35 36 0 0 0 ]
-Numero 35 sera verificado pela consumidora 1
-[0 0 0 0 0 0 36 0 0 0 ]
+[30 31 32 33 34 35 36 0 0 29 ]
+Numero 29 sera verificado pela consumidora 0
+29 eh primo
+[30 31 32 33 34 35 36 0 0 0 ]
 result 0 
 Inserido 37
-[0 0 0 0 0 0 36 37 0 0 ]
-Numero 36 sera verificado pela consumidora 0
-[0 0 0 0 0 0 0 37 0 0 ]
+[30 31 32 33 34 35 36 37 0 0 ]
+Numero 30 sera verificado pela consumidora 0
+[0 31 32 33 34 35 36 37 0 0 ]
 result 0 
 Inserido 38
-[0 0 0 0 0 0 0 37 38 0 ]
-Numero 37 sera verificado pela consumidora 1
-37 eh primo
-[0 0 0 0 0 0 0 0 38 0 ]
+[0 31 32 33 34 35 36 37 38 0 ]
+Numero 31 sera verificado pela consumidora 0
+31 eh primo
+[0 0 32 33 34 35 36 37 38 0 ]
 result 0 
 Inserido 39
-[0 0 0 0 0 0 0 0 38 39 ]
+[0 0 32 33 34 35 36 37 38 39 ]
+Numero 32 sera verificado pela consumidora 0
+[0 0 0 33 34 35 36 37 38 39 ]
+result 0 
 Inserido 40
-[40 0 0 0 0 0 0 0 38 39 ]
+[40 0 0 33 34 35 36 37 38 39 ]
+Numero 33 sera verificado pela consumidora 0
+[40 0 0 0 34 35 36 37 38 39 ]
+result 0 
 Inserido 41
-[40 41 0 0 0 0 0 0 38 39 ]
-Numero 38 sera verificado pela consumidora 0
-[40 41 0 0 0 0 0 0 0 39 ]
+[40 41 0 0 34 35 36 37 38 39 ]
+Numero 34 sera verificado pela consumidora 0
+[40 41 0 0 0 35 36 37 38 39 ]
 result 0 
 Inserido 42
-[40 41 42 0 0 0 0 0 0 39 ]
-Numero 39 sera verificado pela consumidora 1
-[40 41 42 0 0 0 0 0 0 0 ]
-result 0 
-Numero 40 sera verificado pela consumidora 0
-[0 41 42 0 0 0 0 0 0 0 ]
+[40 41 42 0 0 35 36 37 38 39 ]
+Numero 35 sera verificado pela consumidora 0
+[40 41 42 0 0 0 36 37 38 39 ]
 result 0 
 Inserido 43
-[0 41 42 43 0 0 0 0 0 0 ]
-Numero 41 sera verificado pela consumidora 1
-41 eh primo
-[0 0 42 43 0 0 0 0 0 0 ]
-result 0 
-Numero 42 sera verificado pela consumidora 0
-[0 0 0 43 0 0 0 0 0 0 ]
+[40 41 42 43 0 0 36 37 38 39 ]
+Numero 36 sera verificado pela consumidora 0
+[40 41 42 43 0 0 0 37 38 39 ]
 result 0 
 Inserido 44
-[0 0 0 43 44 0 0 0 0 0 ]
-Numero 43 sera verificado pela consumidora 1
-43 eh primo
-[0 0 0 0 44 0 0 0 0 0 ]
+[40 41 42 43 44 0 0 37 38 39 ]
+Numero 37 sera verificado pela consumidora 0
+37 eh primo
+[40 41 42 43 44 0 0 0 38 39 ]
 result 0 
 Inserido 45
-[0 0 0 0 44 45 0 0 0 0 ]
-Numero 44 sera verificado pela consumidora 0
-[0 0 0 0 0 45 0 0 0 0 ]
+[40 41 42 43 44 45 0 0 38 39 ]
+Numero 38 sera verificado pela consumidora 0
+[40 41 42 43 44 45 0 0 0 39 ]
 result 0 
 Inserido 46
-[0 0 0 0 0 45 46 0 0 0 ]
-Numero 45 sera verificado pela consumidora 1
-[0 0 0 0 0 0 46 0 0 0 ]
+[40 41 42 43 44 45 46 0 0 39 ]
+Numero 39 sera verificado pela consumidora 0
+[40 41 42 43 44 45 46 0 0 0 ]
 result 0 
 Inserido 47
-[0 0 0 0 0 0 46 47 0 0 ]
-Numero 46 sera verificado pela consumidora 0
-[0 0 0 0 0 0 0 47 0 0 ]
+[40 41 42 43 44 45 46 47 0 0 ]
+Numero 40 sera verificado pela consumidora 0
+[0 41 42 43 44 45 46 47 0 0 ]
 result 0 
 Inserido 48
-[0 0 0 0 0 0 0 47 48 0 ]
-Numero 47 sera verificado pela consumidora 1
-47 eh primo
-[0 0 0 0 0 0 0 0 48 0 ]
+[0 41 42 43 44 45 46 47 48 0 ]
+Numero 41 sera verificado pela consumidora 0
+41 eh primo
+[0 0 42 43 44 45 46 47 48 0 ]
 result 0 
 Inserido 49
-[0 0 0 0 0 0 0 0 48 49 ]
-Numero 48 sera verificado pela consumidora 0
-[0 0 0 0 0 0 0 0 0 49 ]
+[0 0 42 43 44 45 46 47 48 49 ]
+Numero 42 sera verificado pela consumidora 0
+[0 0 0 43 44 45 46 47 48 49 ]
 result 0 
 Inserido 50
-[50 0 0 0 0 0 0 0 0 49 ]
-Numero 49 sera verificado pela consumidora 1
-[50 0 0 0 0 0 0 0 0 0 ]
+[50 0 0 43 44 45 46 47 48 49 ]
+Numero 43 sera verificado pela consumidora 0
+43 eh primo
+[50 0 0 0 44 45 46 47 48 49 ]
 result 0 
 Inserido 51
-[50 51 0 0 0 0 0 0 0 0 ]
-Numero 50 sera verificado pela consumidora 0
-[0 51 0 0 0 0 0 0 0 0 ]
+[50 51 0 0 44 45 46 47 48 49 ]
+Numero 44 sera verificado pela consumidora 0
+[50 51 0 0 0 45 46 47 48 49 ]
 result 0 
 Inserido 52
-[0 51 52 0 0 0 0 0 0 0 ]
-Numero 51 sera verificado pela consumidora 1
-[0 0 52 0 0 0 0 0 0 0 ]
+[50 51 52 0 0 45 46 47 48 49 ]
+Numero 45 sera verificado pela consumidora 0
+[50 51 52 0 0 0 46 47 48 49 ]
 result 0 
 Inserido 53
-[0 0 52 53 0 0 0 0 0 0 ]
-Numero 52 sera verificado pela consumidora 0
-[0 0 0 53 0 0 0 0 0 0 ]
+[50 51 52 53 0 0 46 47 48 49 ]
+Numero 46 sera verificado pela consumidora 0
+[50 51 52 53 0 0 0 47 48 49 ]
 result 0 
 Inserido 54
-[0 0 0 53 54 0 0 0 0 0 ]
-Numero 53 sera verificado pela consumidora 1
-53 eh primo
-[0 0 0 0 54 0 0 0 0 0 ]
+[50 51 52 53 54 0 0 47 48 49 ]
+Numero 47 sera verificado pela consumidora 0
+47 eh primo
+[50 51 52 53 54 0 0 0 48 49 ]
 result 0 
 Inserido 55
-[0 0 0 0 54 55 0 0 0 0 ]
-Numero 54 sera verificado pela consumidora 0
-[0 0 0 0 0 55 0 0 0 0 ]
+[50 51 52 53 54 55 0 0 48 49 ]
+Numero 48 sera verificado pela consumidora 0
+[50 51 52 53 54 55 0 0 0 49 ]
 result 0 
 Inserido 56
-[0 0 0 0 0 55 56 0 0 0 ]
-Numero 55 sera verificado pela consumidora 1
-[0 0 0 0 0 0 56 0 0 0 ]
+[50 51 52 53 54 55 56 0 0 49 ]
+Numero 49 sera verificado pela consumidora 0
+[50 51 52 53 54 55 56 0 0 0 ]
 result 0 
 Inserido 57
-[0 0 0 0 0 0 56 57 0 0 ]
-Numero 56 sera verificado pela consumidora 0
-[0 0 0 0 0 0 0 57 0 0 ]
+[50 51 52 53 54 55 56 57 0 0 ]
+Numero 50 sera verificado pela consumidora 0
+[0 51 52 53 54 55 56 57 0 0 ]
 result 0 
 Inserido 58
-[0 0 0 0 0 0 0 57 58 0 ]
-Numero 57 sera verificado pela consumidora 1
-[0 0 0 0 0 0 0 0 58 0 ]
+[0 51 52 53 54 55 56 57 58 0 ]
+Numero 51 sera verificado pela consumidora 0
+[0 0 52 53 54 55 56 57 58 0 ]
 result 0 
 Inserido 59
-[0 0 0 0 0 0 0 0 58 59 ]
-Numero 58 sera verificado pela consumidora 0
-[0 0 0 0 0 0 0 0 0 59 ]
+[0 0 52 53 54 55 56 57 58 59 ]
+Numero 52 sera verificado pela consumidora 0
+[0 0 0 53 54 55 56 57 58 59 ]
 result 0 
 Inserido 60
-[60 0 0 0 0 0 0 0 0 59 ]
-Numero 59 sera verificado pela consumidora 1
-59 eh primo
-[60 0 0 0 0 0 0 0 0 0 ]
+[60 0 0 53 54 55 56 57 58 59 ]
+Numero 53 sera verificado pela consumidora 0
+53 eh primo
+[60 0 0 0 54 55 56 57 58 59 ]
 result 0 
 Inserido 61
-[60 61 0 0 0 0 0 0 0 0 ]
-Numero 60 sera verificado pela consumidora 0
-[0 61 0 0 0 0 0 0 0 0 ]
+[60 61 0 0 54 55 56 57 58 59 ]
+Numero 54 sera verificado pela consumidora 0
+[60 61 0 0 0 55 56 57 58 59 ]
 result 0 
 Inserido 62
-[0 61 62 0 0 0 0 0 0 0 ]
-Numero 61 sera verificado pela consumidora 1
-61 eh primo
-[0 0 62 0 0 0 0 0 0 0 ]
+[60 61 62 0 0 55 56 57 58 59 ]
+Numero 55 sera verificado pela consumidora 0
+[60 61 62 0 0 0 56 57 58 59 ]
 result 0 
 Inserido 63
-[0 0 62 63 0 0 0 0 0 0 ]
-Numero 62 sera verificado pela consumidora 0
-[0 0 0 63 0 0 0 0 0 0 ]
+[60 61 62 63 0 0 56 57 58 59 ]
+Numero 56 sera verificado pela consumidora 0
+[60 61 62 63 0 0 0 57 58 59 ]
 result 0 
 Inserido 64
-[0 0 0 63 64 0 0 0 0 0 ]
-Numero 63 sera verificado pela consumidora 1
-[0 0 0 0 64 0 0 0 0 0 ]
+[60 61 62 63 64 0 0 57 58 59 ]
+Numero 57 sera verificado pela consumidora 0
+[60 61 62 63 64 0 0 0 58 59 ]
 result 0 
 Inserido 65
-[0 0 0 0 64 65 0 0 0 0 ]
-Numero 64 sera verificado pela consumidora 0
-[0 0 0 0 0 65 0 0 0 0 ]
+[60 61 62 63 64 65 0 0 58 59 ]
+Numero 58 sera verificado pela consumidora 0
+[60 61 62 63 64 65 0 0 0 59 ]
 result 0 
 Inserido 66
-[0 0 0 0 0 65 66 0 0 0 ]
-Numero 65 sera verificado pela consumidora 1
-[0 0 0 0 0 0 66 0 0 0 ]
+[60 61 62 63 64 65 66 0 0 59 ]
+Numero 59 sera verificado pela consumidora 0
+59 eh primo
+[60 61 62 63 64 65 66 0 0 0 ]
 result 0 
 Inserido 67
-[0 0 0 0 0 0 66 67 0 0 ]
-Numero 66 sera verificado pela consumidora 0
-[0 0 0 0 0 0 0 67 0 0 ]
+[60 61 62 63 64 65 66 67 0 0 ]
+Numero 60 sera verificado pela consumidora 0
+[0 61 62 63 64 65 66 67 0 0 ]
 result 0 
 Inserido 68
-[0 0 0 0 0 0 0 67 68 0 ]
-Numero 67 sera verificado pela consumidora 1
-67 eh primo
-[0 0 0 0 0 0 0 0 68 0 ]
+[0 61 62 63 64 65 66 67 68 0 ]
+Numero 61 sera verificado pela consumidora 0
+61 eh primo
+[0 0 62 63 64 65 66 67 68 0 ]
 result 0 
 Inserido 69
-[0 0 0 0 0 0 0 0 68 69 ]
-Numero 68 sera verificado pela consumidora 0
-[0 0 0 0 0 0 0 0 0 69 ]
+[0 0 62 63 64 65 66 67 68 69 ]
+Numero 62 sera verificado pela consumidora 0
+[0 0 0 63 64 65 66 67 68 69 ]
 result 0 
 Inserido 70
-[70 0 0 0 0 0 0 0 0 69 ]
-Numero 69 sera verificado pela consumidora 1
-[70 0 0 0 0 0 0 0 0 0 ]
+[70 0 0 63 64 65 66 67 68 69 ]
+Numero 63 sera verificado pela consumidora 0
+[70 0 0 0 64 65 66 67 68 69 ]
 result 0 
 Inserido 71
-[70 71 0 0 0 0 0 0 0 0 ]
-Numero 70 sera verificado pela consumidora 0
-[0 71 0 0 0 0 0 0 0 0 ]
+[70 71 0 0 64 65 66 67 68 69 ]
+Numero 64 sera verificado pela consumidora 0
+[70 71 0 0 0 65 66 67 68 69 ]
 result 0 
 Inserido 72
-[0 71 72 0 0 0 0 0 0 0 ]
-Numero 71 sera verificado pela consumidora 1
-71 eh primo
-[0 0 72 0 0 0 0 0 0 0 ]
+[70 71 72 0 0 65 66 67 68 69 ]
+Numero 65 sera verificado pela consumidora 0
+[70 71 72 0 0 0 66 67 68 69 ]
 result 0 
 Inserido 73
-[0 0 72 73 0 0 0 0 0 0 ]
-Numero 72 sera verificado pela consumidora 0
-[0 0 0 73 0 0 0 0 0 0 ]
+[70 71 72 73 0 0 66 67 68 69 ]
+Numero 66 sera verificado pela consumidora 0
+[70 71 72 73 0 0 0 67 68 69 ]
 result 0 
 Inserido 74
-[0 0 0 73 74 0 0 0 0 0 ]
-Numero 73 sera verificado pela consumidora 1
-73 eh primo
-[0 0 0 0 74 0 0 0 0 0 ]
+[70 71 72 73 74 0 0 67 68 69 ]
+Numero 67 sera verificado pela consumidora 0
+67 eh primo
+[70 71 72 73 74 0 0 0 68 69 ]
 result 0 
 Inserido 75
-[0 0 0 0 74 75 0 0 0 0 ]
-Numero 74 sera verificado pela consumidora 0
-[0 0 0 0 0 75 0 0 0 0 ]
+[70 71 72 73 74 75 0 0 68 69 ]
+Numero 68 sera verificado pela consumidora 0
+[70 71 72 73 74 75 0 0 0 69 ]
 result 0 
 Inserido 76
-[0 0 0 0 0 75 76 0 0 0 ]
-Numero 75 sera verificado pela consumidora 1
-[0 0 0 0 0 0 76 0 0 0 ]
+[70 71 72 73 74 75 76 0 0 69 ]
+Numero 69 sera verificado pela consumidora 0
+[70 71 72 73 74 75 76 0 0 0 ]
 result 0 
 Inserido 77
-[0 0 0 0 0 0 76 77 0 0 ]
-Numero 76 sera verificado pela consumidora 0
-[0 0 0 0 0 0 0 77 0 0 ]
+[70 71 72 73 74 75 76 77 0 0 ]
+Numero 70 sera verificado pela consumidora 0
+[0 71 72 73 74 75 76 77 0 0 ]
 result 0 
 Inserido 78
-[0 0 0 0 0 0 0 77 78 0 ]
-Numero 77 sera verificado pela consumidora 1
-[0 0 0 0 0 0 0 0 78 0 ]
+[0 71 72 73 74 75 76 77 78 0 ]
+Numero 71 sera verificado pela consumidora 0
+71 eh primo
+[0 0 72 73 74 75 76 77 78 0 ]
 result 0 
 Inserido 79
-[0 0 0 0 0 0 0 0 78 79 ]
-Numero 78 sera verificado pela consumidora 0
-[0 0 0 0 0 0 0 0 0 79 ]
+[0 0 72 73 74 75 76 77 78 79 ]
+Numero 72 sera verificado pela consumidora 0
+[0 0 0 73 74 75 76 77 78 79 ]
 result 0 
 Inserido 80
-[80 0 0 0 0 0 0 0 0 79 ]
-Numero 79 sera verificado pela consumidora 1
-79 eh primo
-[80 0 0 0 0 0 0 0 0 0 ]
+[80 0 0 73 74 75 76 77 78 79 ]
+Numero 73 sera verificado pela consumidora 0
+73 eh primo
+[80 0 0 0 74 75 76 77 78 79 ]
 result 0 
 Inserido 81
-[80 81 0 0 0 0 0 0 0 0 ]
-Numero 80 sera verificado pela consumidora 0
-[0 81 0 0 0 0 0 0 0 0 ]
+[80 81 0 0 74 75 76 77 78 79 ]
+Numero 74 sera verificado pela consumidora 0
+[80 81 0 0 0 75 76 77 78 79 ]
 result 0 
 Inserido 82
-[0 81 82 0 0 0 0 0 0 0 ]
-Numero 81 sera verificado pela consumidora 1
-[0 0 82 0 0 0 0 0 0 0 ]
+[80 81 82 0 0 75 76 77 78 79 ]
+Numero 75 sera verificado pela consumidora 0
+[80 81 82 0 0 0 76 77 78 79 ]
 result 0 
 Inserido 83
-[0 0 82 83 0 0 0 0 0 0 ]
-Numero 82 sera verificado pela consumidora 0
-[0 0 0 83 0 0 0 0 0 0 ]
+[80 81 82 83 0 0 76 77 78 79 ]
+Numero 76 sera verificado pela consumidora 0
+[80 81 82 83 0 0 0 77 78 79 ]
 result 0 
 Inserido 84
-[0 0 0 83 84 0 0 0 0 0 ]
-Numero 83 sera verificado pela consumidora 1
-83 eh primo
-[0 0 0 0 84 0 0 0 0 0 ]
+[80 81 82 83 84 0 0 77 78 79 ]
+Numero 77 sera verificado pela consumidora 0
+[80 81 82 83 84 0 0 0 78 79 ]
 result 0 
 Inserido 85
-[0 0 0 0 84 85 0 0 0 0 ]
-Numero 84 sera verificado pela consumidora 0
-[0 0 0 0 0 85 0 0 0 0 ]
+[80 81 82 83 84 85 0 0 78 79 ]
+Numero 78 sera verificado pela consumidora 0
+[80 81 82 83 84 85 0 0 0 79 ]
 result 0 
 Inserido 86
-[0 0 0 0 0 85 86 0 0 0 ]
-Numero 85 sera verificado pela consumidora 1
-[0 0 0 0 0 0 86 0 0 0 ]
+[80 81 82 83 84 85 86 0 0 79 ]
+Numero 79 sera verificado pela consumidora 0
+79 eh primo
+[80 81 82 83 84 85 86 0 0 0 ]
 result 0 
 Inserido 87
-[0 0 0 0 0 0 86 87 0 0 ]
+[80 81 82 83 84 85 86 87 0 0 ]
+Numero 80 sera verificado pela consumidora 0
+[0 81 82 83 84 85 86 87 0 0 ]
+result 0 
 Inserido 88
-[0 0 0 0 0 0 86 87 88 0 ]
+[0 81 82 83 84 85 86 87 88 0 ]
+Numero 81 sera verificado pela consumidora 0
+[0 0 82 83 84 85 86 87 88 0 ]
+result 0 
 Inserido 89
-[0 0 0 0 0 0 86 87 88 89 ]
+[0 0 82 83 84 85 86 87 88 89 ]
+Numero 82 sera verificado pela consumidora 0
+[0 0 0 83 84 85 86 87 88 89 ]
+result 0 
 Inserido 90
-[90 0 0 0 0 0 86 87 88 89 ]
+[90 0 0 83 84 85 86 87 88 89 ]
+Numero 83 sera verificado pela consumidora 0
+83 eh primo
+[90 0 0 0 84 85 86 87 88 89 ]
+result 0 
 Inserido 91
-[90 91 0 0 0 0 86 87 88 89 ]
-Numero 86 sera verificado pela consumidora 1
-[90 91 0 0 0 0 0 87 88 89 ]
+[90 91 0 0 84 85 86 87 88 89 ]
+Numero 84 sera verificado pela consumidora 0
+[90 91 0 0 0 85 86 87 88 89 ]
 result 0 
 Inserido 92
-[90 91 92 0 0 0 0 87 88 89 ]
-Numero 87 sera verificado pela consumidora 1
-[90 91 92 0 0 0 0 0 88 89 ]
+[90 91 92 0 0 85 86 87 88 89 ]
+Numero 85 sera verificado pela consumidora 0
+[90 91 92 0 0 0 86 87 88 89 ]
 result 0 
 Inserido 93
-[90 91 92 93 0 0 0 0 88 89 ]
-Numero 88 sera verificado pela consumidora 1
-[90 91 92 93 0 0 0 0 0 89 ]
+[90 91 92 93 0 0 86 87 88 89 ]
+Numero 86 sera verificado pela consumidora 0
+[90 91 92 93 0 0 0 87 88 89 ]
 result 0 
 Inserido 94
-[90 91 92 93 94 0 0 0 0 89 ]
-Numero 89 sera verificado pela consumidora 0
-89 eh primo
-[90 91 92 93 94 0 0 0 0 0 ]
-result 0 
-Numero 90 sera verificado pela consumidora 1
-[0 91 92 93 94 0 0 0 0 0 ]
+[90 91 92 93 94 0 0 87 88 89 ]
+Numero 87 sera verificado pela consumidora 0
+[90 91 92 93 94 0 0 0 88 89 ]
 result 0 
 Inserido 95
-[0 91 92 93 94 95 0 0 0 0 ]
-Numero 91 sera verificado pela consumidora 0
-[0 0 92 93 94 95 0 0 0 0 ]
-result 0 
-Numero 92 sera verificado pela consumidora 1
-[0 0 0 93 94 95 0 0 0 0 ]
+[90 91 92 93 94 95 0 0 88 89 ]
+Numero 88 sera verificado pela consumidora 0
+[90 91 92 93 94 95 0 0 0 89 ]
 result 0 
 Inserido 96
-[0 0 0 93 94 95 96 0 0 0 ]
-Numero 93 sera verificado pela consumidora 0
-[0 0 0 0 94 95 96 0 0 0 ]
-result 0 
-Numero 94 sera verificado pela consumidora 1
-[0 0 0 0 0 95 96 0 0 0 ]
+[90 91 92 93 94 95 96 0 0 89 ]
+Numero 89 sera verificado pela consumidora 0
+89 eh primo
+[90 91 92 93 94 95 96 0 0 0 ]
 result 0 
 Inserido 97
-[0 0 0 0 0 95 96 97 0 0 ]
-Numero 95 sera verificado pela consumidora 0
-[0 0 0 0 0 0 96 97 0 0 ]
-result 0 
-Numero 96 sera verificado pela consumidora 1
-[0 0 0 0 0 0 0 97 0 0 ]
+[90 91 92 93 94 95 96 97 0 0 ]
+Numero 90 sera verificado pela consumidora 0
+[0 91 92 93 94 95 96 97 0 0 ]
 result 0 
 Inserido 98
-[0 0 0 0 0 0 0 97 98 0 ]
-Numero 97 sera verificado pela consumidora 0
-97 eh primo
-[0 0 0 0 0 0 0 0 98 0 ]
+[0 91 92 93 94 95 96 97 98 0 ]
+Numero 91 sera verificado pela consumidora 0
+[0 0 92 93 94 95 96 97 98 0 ]
 result 0 
 Inserido 99
+[0 0 92 93 94 95 96 97 98 99 ]
+Numero 92 sera verificado pela consumidora 0
+[0 0 0 93 94 95 96 97 98 99 ]
+result 0 
+Numero 93 sera verificado pela consumidora 0
+[0 0 0 0 94 95 96 97 98 99 ]
+result 0 
+Numero 94 sera verificado pela consumidora 0
+[0 0 0 0 0 95 96 97 98 99 ]
+result 0 
+Numero 95 sera verificado pela consumidora 0
+[0 0 0 0 0 0 96 97 98 99 ]
+result 0 
+Numero 96 sera verificado pela consumidora 0
+[0 0 0 0 0 0 0 97 98 99 ]
+result 0 
+Numero 97 sera verificado pela consumidora 0
+97 eh primo
 [0 0 0 0 0 0 0 0 98 99 ]
-Numero 98 sera verificado pela consumidora 1
+result 0 
+Numero 98 sera verificado pela consumidora 0
 [0 0 0 0 0 0 0 0 0 99 ]
 result 0 
-saindo da thread 1
-Inserido -1
-[-1 0 0 0 0 0 0 0 0 99 ]
-Inserido -1
-[-1 -1 0 0 0 0 0 0 0 99 ]
 Numero 99 sera verificado pela consumidora 0
-[-1 -1 0 0 0 0 0 0 0 0 ]
+[0 0 0 0 0 0 0 0 0 0 ]
 result 0 
+Inserido -1
+[-1 0 0 0 0 0 0 0 0 0 ]
+result 1 
 saindo da thread 0
-a thread 0 consumiu 3
-a thread 1 consumiu 22
-Entao ao final de nossa analise a thread vencedora eh: 1 descobrindo 22 primos de 25
+a thread 0 consumiu 25
+Entao ao final de nossa analise a thread vencedora eh: 0 descobrindo 25 primos de 25

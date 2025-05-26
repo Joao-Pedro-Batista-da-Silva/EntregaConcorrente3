@@ -5,17 +5,13 @@
 #include <unistd.h>
 #include <math.h>
 
-#define PRODUTORES 10
-#define CONSUMIDORES 5
-#define MAX (PRODUTORES+CONSUMIDORES)
-
-sem_t slotCheio, slotVazio; 
+sem_t slotCheio, slotVazio, contador; 
 sem_t mutexGeral;
 
 int* canal;
 int N;
 int M;
-int n_analisado = 0;
+int n_analisados = 0, numeros_no_canal = 0;
 
 
 typedef struct 
@@ -50,6 +46,11 @@ void Insere(int num, int M){
 
     canal[in] = num;
     in = (in+1)%M;
+    if(num != -1){
+        sem_wait(&contador);
+        numeros_no_canal++;
+        sem_post(&contador);
+    }
     printf("Inserido %d\n", num);
     printCanal(canal,M);
 
@@ -63,19 +64,29 @@ int verificaPrimo(int id, int M, threadConsome *args){
     sem_wait(&slotCheio);
     sem_wait(&mutexGeral);
     validar_num = canal[out];
-    if(n_analisado == -1 ) {
-        sem_post(&mutexGeral);
-        sem_post(&slotCheio);
-        return 1;
+    if(validar_num == -1) {
+        sem_wait(&contador);
+        if (numeros_no_canal == 0) {
+            sem_post(&mutexGeral);
+            sem_post(&slotCheio);
+            sem_post(&contador);
+            return 1;
+        }
+        sem_post(&contador);
     }
     printf("Numero %d sera verificado pela consumidora %d\n", validar_num, id);
     canal[out] = 0;
+    out = (out+1)%M;
     if(ehPrimo(validar_num)){
         args->quantoConsumiu+=1;
         printf("%d eh primo\n", validar_num);
     }
-    out = (out+1)%M;
     printCanal(canal,M);
+
+    sem_wait(&contador);
+    numeros_no_canal--;
+    sem_post(&contador);
+
     sem_post(&mutexGeral);
     sem_post(&slotVazio);
     return 0;
@@ -84,12 +95,17 @@ int verificaPrimo(int id, int M, threadConsome *args){
 
 void *produtor(void *arg){
     int nthreads = (int) arg;
-    while(n_analisado<N){
-        //sleep(1);
-        Insere(n_analisado, M);
-        n_analisado+=1;
+    for (int i = 0; i < N; i++) {
+        Insere(i, M);
     }
-
+    while(1){
+        sem_wait(&contador);
+        if(numeros_no_canal == 0){ //nao tem mais numeros no canal
+            sem_post(&contador);
+            break;
+        }
+        sem_post(&contador);
+    }
     for(int i = 0; i<nthreads;i++){
         Insere(-1,M);
     }
@@ -103,7 +119,7 @@ void *consumidor(void *arg){
     printf("estou na thread %d\n", args->id);
     int result = 0;
     //free(arg);
-    while(n_analisado<N){
+    while(n_analisados<N){
         result += verificaPrimo(args->id,M,args);
         printf("result %d \n", result);
         if(result) break;
