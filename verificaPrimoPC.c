@@ -148,6 +148,7 @@ int main(int argc, char * argv[]){
     args_consome = (threadConsome *) malloc(sizeof(threadConsome)*nthreads);
 
     sem_init(&mutexGeral, 0, 1);
+    sem_init(&contador, 0, 1);
     sem_init(&slotCheio, 0, 0);
     sem_init(&slotVazio, 0, M);
 
