@@ -1,1 +1,4 @@
 Esse projeto é relacionado a atividade 6 da terceira entrega da disciplina de programação concorrente
+As Entradas aceitas pelo programa estão no formato ./a.exe <ate que numero deseja analisar> <tamanho do canal> <numero de threads>
+
+O código ao terminar de colocar todos números solicitados insere -1 para cada thread presente, esse -1 funciona como um aviso para as threads de consumo entenderem que não será mais inserido nenhum número. Também foi criado uma variável que controla quantos números ainda há no canal, pois devido a lógica anterior ocorria um problema quando colocavamos apenas 1 thread que ela acaba por não verificar o último primo, pois acabava lendo o -1 e saindo.
