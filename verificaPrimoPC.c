@@ -1,3 +1,5 @@
+// João Pedro Batista da Silva
+// 121053174
 #include <pthread.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -46,7 +48,7 @@ void Insere(int num, int M){
 
     canal[in] = num;
     in = (in+1)%M;
-    if(num != -1){
+    if(num != -1){ // verifica se o numero analisado agora é diferente  de -1 se for soma 1 no total de numeros no canal
         sem_wait(&contador);
         numeros_no_canal++;
         sem_post(&contador);
@@ -64,7 +66,7 @@ int verificaPrimo(int id, int M, threadConsome *args){
     sem_wait(&slotCheio);
     sem_wait(&mutexGeral);
     validar_num = canal[out];
-    if(validar_num == -1) {
+    if(validar_num == -1) { // se o numero analisado agora for -1, verifica se o total de numeros no canal é 0, se for retorna 1 e quebra o loop das consumidoras
         sem_wait(&contador);
         if (numeros_no_canal == 0) {
             sem_post(&mutexGeral);
@@ -75,16 +77,16 @@ int verificaPrimo(int id, int M, threadConsome *args){
         sem_post(&contador);
     }
     //printf("Numero %d sera verificado pela consumidora %d\n", validar_num, id);
-    canal[out] = 0;
+    canal[out] = 0; //retira o numero do canal e coloca 0 no lugar
     out = (out+1)%M;
     if(ehPrimo(validar_num)){
-        args->quantoConsumiu+=1;
+        args->quantoConsumiu+=1;// conta quantos primos aquela thread contou
         //printf("%d eh primo\n", validar_num);
     }
     //printCanal(canal,M);
 
     sem_wait(&contador);
-    numeros_no_canal--;
+    numeros_no_canal--;//retirou com sucesso numero do canal
     sem_post(&contador);
 
     sem_post(&mutexGeral);
@@ -106,7 +108,7 @@ void *produtor(void *arg){
         }
         sem_post(&contador);
     }
-    for(int i = 0; i<nthreads;i++){
+    for(int i = 0; i<nthreads;i++){ // adiciona -1 por thread consumidora, quando thread ver -1 sairá
         Insere(-1,M);
     }
 
@@ -120,7 +122,7 @@ void *consumidor(void *arg){
     int result = 0;
     //free(arg);
     while(n_analisados<N){
-        result += verificaPrimo(args->id,M,args);
+        result = verificaPrimo(args->id,M,args);
         //printf("result %d \n", result);
         if(result) break;
     }
